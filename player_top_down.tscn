@@ -199,9 +199,8 @@ shape = SubResource("CapsuleShape2D_kifkc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -1)
 sprite_frames = SubResource("SpriteFrames_igt05")
-animation = &"Run"
+animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.522366
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
