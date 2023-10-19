@@ -1,0 +1,2 @@
+/loadmod WeaponsOverhaul.mod
+/load Weapons

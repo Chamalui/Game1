@@ -1,0 +1,2 @@
+/loadwep WO_PlasmaMinigun.wep
+/loadwep WO_UltraLaserPistol.wep
