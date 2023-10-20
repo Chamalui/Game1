@@ -22,7 +22,7 @@ func _physics_process(delta):
 	elif direction.x < 0:
 		$AnimatedSprite2D.flip_h = true
 		#print(direction.x)
+		
 
-	
 	
 	move_and_slide()

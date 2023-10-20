@@ -210,9 +210,12 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="assaultRifle" type="Node2D" parent="."]
-position = Vector2(12, -10)
+position = Vector2(11, -11)
 script = ExtResource("3_hflt2")
 
 [node name="Sprite2D" type="Sprite2D" parent="assaultRifle"]
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_7xgog")
+
+[node name="Marker2D" type="Marker2D" parent="assaultRifle"]
+position = Vector2(-4, 2)
