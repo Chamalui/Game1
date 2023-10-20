@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsslc4or564fr"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_2lchb"]
-[ext_resource type="PackedScene" uid="uid://8e3b6byxa78d" path="res://menu_backhround.tscn" id="2_5rpyc"]
+[ext_resource type="Script" path="res://menu.gd" id="1_4nfr1"]
+[ext_resource type="PackedScene" uid="uid://8e3b6byxa78d" path="res://scenes/menu_backhround.tscn" id="2_1j54i"]
 
 [node name="Menu" type="Node2D"]
-script = ExtResource("1_2lchb")
+script = ExtResource("1_4nfr1")
 
 [node name="Play" type="Button" parent="."]
 offset_left = 386.0
@@ -22,7 +22,7 @@ offset_bottom = 476.0
 theme_override_font_sizes/font_size = 50
 text = "Quit"
 
-[node name="menuBackhround" parent="." instance=ExtResource("2_5rpyc")]
+[node name="menuBackhround" parent="." instance=ExtResource("2_1j54i")]
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Ouit" to="." method="_on_ouit_pressed"]

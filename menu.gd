@@ -9,4 +9,4 @@ func _on_ouit_pressed():
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://level.tscn")
+	get_tree().change_scene_to_file("res://scenes/level.tscn")
