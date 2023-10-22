@@ -6,8 +6,23 @@ const SPEED = 200
 
 @onready var animate = $AnimatedSprite2D
 
+func _animation_flip(player_direction):
+	if player_direction.x > 0:
+		$AnimatedSprite2D.flip_h = false
+		#print(direction.x)
+	elif player_direction.x < 0:
+		$AnimatedSprite2D.flip_h = true
+		#print(direction.x)
+		
+func direction():
+	#var direction = Input.get_vector("left", "right", "up", "down").normalized()
+	print("hui sosi")
+
 func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down").normalized()
+	#direction()
+	
+	_animation_flip(direction)
 	
 	if direction:
 		velocity = direction * SPEED
@@ -16,12 +31,7 @@ func _physics_process(delta):
 		velocity = Vector2.ZERO
 		animate.play("Idle")
 	
-	if direction.x > 0:
-		$AnimatedSprite2D.flip_h = false
-		#print(direction.x)
-	elif direction.x < 0:
-		$AnimatedSprite2D.flip_h = true
-		#print(direction.x)
+	
 		
 
 	
