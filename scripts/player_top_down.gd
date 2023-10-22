@@ -32,7 +32,5 @@ func _physics_process(delta):
 		animate.play("Idle")
 	
 	
-		
-
 	
 	move_and_slide()
