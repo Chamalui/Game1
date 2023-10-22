@@ -16,7 +16,7 @@ func _animation_flip(player_direction):
 		
 func direction():
 	#var direction = Input.get_vector("left", "right", "up", "down").normalized()
-	print("hui sosi")
+	var a = "1"
 
 func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down").normalized()
