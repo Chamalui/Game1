@@ -2,11 +2,13 @@ extends Node2D
 
 func fire():
 	print("piu-piu")
-	print(global_position)
+	print(global_position.x,"позоция пушки")
+	print(get_global_mouse_position().x,"позиция курсора")
+	print(global_position.x - get_global_mouse_position().x,"разница расстояний курсора и пушки")
 
 func _process(delta):
 	#print((($".".rotation)*180)/PI)
-	#look_at(get_global_mouse_position())
+	look_at(get_global_mouse_position())
 	
 	#Странное поведение объекта: он поворачивается приемущественно когда курсор вне окна с игрой и обнуляет значение угла когда он становится больше шести с чем-то значения всегда разные
 	#var pre = $".".position-get_global_mouse_position()
@@ -30,13 +32,14 @@ func _process(delta):
 	#	$Sprite2D.flip_v = false
 	var direction = Input.get_vector("left", "right", "up", "down").normalized()
 	
-	if direction.x > 0:
+	#if direction.x > 0:
+	#	$Sprite2D.flip_v = false
+		#print(direction.x)
+	#elif direction.x < 0:
+	#	$Sprite2D.flip_v = true
+		#print(direction.x)
+		
+	if global_position.x - get_global_mouse_position().x < 0:
 		$Sprite2D.flip_v = false
-		#print(direction.x)
-	elif direction.x < 0:
+	else:
 		$Sprite2D.flip_v = true
-		#print(direction.x)
-	
-	
-	
-	
