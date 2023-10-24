@@ -1,10 +1,18 @@
 extends Node2D
 
+var bullet_speed = 2000
+var bullet = preload("res://scenes/bullet.tscn")
+
 func fire():
 	print("piu-piu")
 	print(global_position.x,"позоция пушки")
 	print(get_global_mouse_position().x,"позиция курсора")
 	print(global_position.x - get_global_mouse_position().x,"разница расстояний курсора и пушки")
+	var bullet_instance = bullet.instantiate()
+	bullet_instance.position = get_global_position()
+	bullet_instance.rotation_degrees = rotation_degrees
+	bullet_instance.apply_impulse(Vector2(),Vector2(bullet_speed,0).rotated(rotation))
+	get_tree().get_root().call_deferred("add_child",bullet_instance)
 
 func _process(delta):
 	#print((($".".rotation)*180)/PI)
@@ -26,6 +34,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_select"):
 		fire()
 		
+	#print(bullet.position)
 	#if $".".rotation < 1.5 and $".".rotation > -1.5:
 	#	$Sprite2D.flip_v = true
 	#else:
