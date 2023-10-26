@@ -3,17 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://jtfusxamipku" path="res://assets/sprites/Bullets/Bullet1.png" id="1_w1hg0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ho5xh"]
-size = Vector2(20, 12)
+size = Vector2(10, 5.45455)
 
 [node name="Bullet" type="RigidBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5.96046e-08)
 scale = Vector2(1, 1.1)
 shape = SubResource("RectangleShape2D_ho5xh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_w1hg0")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]

@@ -1,6 +1,6 @@
 extends Node2D
 
-var bullet_speed = 2000
+var bullet_speed = 1500
 var bullet = preload("res://scenes/bullet.tscn")
 
 func fire():
@@ -8,11 +8,15 @@ func fire():
 	print(global_position.x,"позоция пушки")
 	print(get_global_mouse_position().x,"позиция курсора")
 	print(global_position.x - get_global_mouse_position().x,"разница расстояний курсора и пушки")
+	var velocity = Vector2()
 	var bullet_instance = bullet.instantiate()
 	bullet_instance.position = get_global_position()
 	bullet_instance.rotation_degrees = rotation_degrees
-	bullet_instance.apply_impulse(Vector2(),Vector2(bullet_speed,0).rotated(rotation))
+	#bullet_instance.apply_impulse(Vector2(),Vector2(bullet_speed,0).rotated(rotation))
+	bullet_instance.linear_velocity = Vector2(bullet_speed,0).rotated(rotation)
 	get_tree().get_root().call_deferred("add_child",bullet_instance)
+	#velocity = Vector2(bullet_speed, 0).rotated(bullet_instance.rotation)
+	
 
 func _process(delta):
 	#print((($".".rotation)*180)/PI)
