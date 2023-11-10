@@ -72,6 +72,14 @@ down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="walls"
+2d_physics/layer_2="player"
+2d_physics/layer_3="enemy"
+2d_physics/layer_4="player_bullets"
+2d_physics/layer_5="enemy_bullets"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

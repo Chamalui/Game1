@@ -13,6 +13,7 @@ func _animation_flip(player_direction):
 	elif player_direction.x < 0:
 		$AnimatedSprite2D.flip_h = true
 		#print(direction.x)
+	
 		
 func direction():
 	#var direction = Input.get_vector("left", "right", "up", "down").normalized()

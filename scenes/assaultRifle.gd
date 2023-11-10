@@ -4,10 +4,10 @@ var bullet_speed = 1500
 var bullet = preload("res://scenes/bullet.tscn")
 
 func fire():
-	print("piu-piu")
-	print(global_position.x,"позоция пушки")
-	print(get_global_mouse_position().x,"позиция курсора")
-	print(global_position.x - get_global_mouse_position().x,"разница расстояний курсора и пушки")
+	#print("piu-piu")
+	#print(global_position.x,"позоция пушки")
+	#print(get_global_mouse_position().x,"позиция курсора")
+	#print(global_position.x - get_global_mouse_position().x,"разница расстояний курсора и пушки")
 	var velocity = Vector2()
 	var bullet_instance = bullet.instantiate()
 	bullet_instance.position = get_global_position()
